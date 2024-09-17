@@ -1,12 +1,17 @@
+import CardInfor from '../cardInfor/cardInfor.jsx'
 import './style.css'
 
-export default function Button(){
-    return(
+export default function Button(props) {
+
+    props.CardInfor
+
+    return (
         <>
-        <button className={'button'}>
-            aperte
-        </button>
-        
+            <button>
+                aperte
+            </button>
         </>
     )
 }
+
+

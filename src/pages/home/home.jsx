@@ -1,7 +1,9 @@
 import Header from '../../components/header/header.jsx'
 import Footer from '../../components/Footer/footer.jsx'
 import Button from '../../components/button/button.jsx'
+import CardStudents from '../../components/cardStudents/cardStudents.jsx'
 import './style.css'
+import CardInfor from '../../components/cardInfor/cardInfor.jsx'
 
 export default function Home() {
 
@@ -17,25 +19,29 @@ export default function Home() {
 
             <section>
                 <div className={'container'}>
-                    <img src={"/cursoEmVideo-logo.png"} alt=""/>
+                    <img src={"/cursoEmVideo-logo.png"} alt="" />
                     <h1>Curso Em Video</h1>
-                    
+
                     <img src={"/pda-logo.png"} alt="" />
                     <h1>Programadores do Amanhã</h1>
-                    
+
                     <img src={"/alura.png"} alt="" />
                     <h1>Alura</h1>
-                    
+
                 </div>
             </section>
 
             <section>
                 <div className={'requisition'}>
-                    <h1>Requisição</h1>
-                    <input type="text" placeholder='Digite aqui' /> <br />
-                    <Button/>
+                    <h1>Cadastrar Cursos</h1>
+                    <input type="text" placeholder='Título' /> <br />
+                    <input type="text" placeholder='Descrição' /> <br />
+                    <input type="text" placeholder='Idioma' /> <br />
+                    <Button />
                 </div>
             </section>
+            <CardStudents />
+            <CardInfor />
 
             <Footer />
         </>

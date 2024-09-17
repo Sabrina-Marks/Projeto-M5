@@ -1,0 +1,26 @@
+main{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.card{
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.info{
+    display: flex;
+    gap: 15px;
+}
+
+.image{
+    width: 30%;
+    height: 30%;
+}
