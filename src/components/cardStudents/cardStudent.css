@@ -3,7 +3,7 @@ main{
     flex-flow: row wrap;
 }
 
-.container{
+.containerCardStudent{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13,18 +13,19 @@ main{
     padding: 20px;
 }
 
-.cardAllCousers{
-    width: 400px;
-    height: 450px;
+.cardStudent{
+    width: 350px;
+    height: 150px;
     background:  rgb(45, 101, 148);
     margin-top: 10px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 1%;
 }
 
-.dataCouser{
+.data{
     display: flex;
     gap: 15px;
 }
