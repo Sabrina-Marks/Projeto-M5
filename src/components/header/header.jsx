@@ -4,11 +4,14 @@ export default function Header() {
     return (
         <>
             <header className={'header'}>
-                <span>Sabrina Marques</span>
+                <span>Cursos Gratuitos</span>
                 <nav>
-                    <a href="www.linkedin.com/in/sabrina-marques-268b292b5">LinkedIn</a>
-                    <a href="https://github.com/Sabrina-Marks">GitHub</a>
-                    <a href="">E-mail</a>
+                    <button className={'buttonHeader'}>
+                        <a href="https://www.linkedin.com/in/marques-sabrina/">LinkedIn</a>
+                    </button>
+                    <button className={'buttonHeader'}>
+                        <a href="https://github.com/Sabrina-Marks">GitHub</a>
+                    </button>
                 </nav>
             </header>
         </>

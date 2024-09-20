@@ -1,9 +1,9 @@
-main{
+main {
     display: flex;
     flex-flow: row wrap;
 }
 
-.containerCardStudent{
+.containerCardStudent {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13,10 +13,10 @@ main{
     padding: 20px;
 }
 
-.cardStudent{
+.cardStudent {
     width: 350px;
     height: 150px;
-    background:  rgb(45, 101, 148);
+    background: rgb(45, 101, 148);
     margin-top: 10px;
     margin-left: 10px;
     display: flex;
@@ -25,7 +25,20 @@ main{
     padding: 1%;
 }
 
-.data{
+.data {
+    font-family: 'osvaldo', 'fira-code';
+    font-size: large;
+    color: black;
     display: flex;
     gap: 15px;
+}
+
+.containerBtnStudent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
 }

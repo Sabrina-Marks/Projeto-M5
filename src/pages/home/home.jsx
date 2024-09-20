@@ -9,7 +9,7 @@ export default function Home() {
 
     return (
         <>
-            <Header />
+            <Header/>
             <section>
                 <div className={'description'}>
                     <h2>Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável.</h2>
@@ -36,16 +36,16 @@ export default function Home() {
                 </div>
             </section>
 
-            <section>
+            {/* <section>
                 <div className={'requisition'}>
                     <h1>Cadastrar Cursos</h1>
                     <input type="text" placeholder='Título' /> <br />
                     <input type="text" placeholder='Descrição' /> <br />
                     <input type="text" placeholder='Idioma' /> <br />
                 </div>
-            </section>
-            <CardInfor />
-            <CardStudents />
+            </section> */}
+            <CardInfor/>
+            <CardStudents/>
             <Footer />
         </>
     )
