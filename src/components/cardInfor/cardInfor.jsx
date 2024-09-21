@@ -1,6 +1,9 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react'
 import axios from 'axios'
 import './style.css'
+import IconDelete from '../../assets/delete.svg'
+import iconCouse from '../../assets/couser.png'
+
 
 export default function CardInfor() {
   const [couser, setCouser] = useState([]);
@@ -37,6 +40,8 @@ export default function CardInfor() {
     titleRef.current.value = ''
     descriptionRef.current.value = ''
     languagemRef.current.value = ''
+    getCouser()
+
   }
 
 
@@ -71,7 +76,7 @@ export default function CardInfor() {
     <>
       <div className={'containerBtn'}>
         <div className={'info'}>
-          <h4>Veja todos os cursos disponiveis</h4>
+          <h4>Veja todos os cursos disponível</h4>
           <button onClick={buttonGetAllCousers} className={'button'} >Todos os cursos</button>
         </div>
         <div className={'info'}>
@@ -88,11 +93,16 @@ export default function CardInfor() {
           return (
             <div key={couse.id} className={'cardAllCousers'}>
               <div>
+                <div className={'containerIcon'}>
+                  <img src={iconCouse} className={'imgIcon'} />
+                </div>
                 <p className={'dataCouser'}>Titulo do Curso: {couse.title}</p> <br />
                 <p className={'dataCouser'}>Descrição do Curso: {couse.description}</p> <br />
                 <p className={'dataCouser'}>Idioma do Curso: {couse.languagem}</p> <br />
               </div>
-              <button onClick={() => deleteCouser(couse.id)}>deletar</button>
+              <button onClick={() => deleteCouser(couse.id)} className={'buttonDelete'}>
+                <img src={IconDelete} />
+              </button>
             </div>
           )
         })}
@@ -101,6 +111,9 @@ export default function CardInfor() {
         {buttonCouserLanguagem.map(language => (
           <div key={language.id} className={'cardAllCousers'}>
             <div>
+              <div className={'containerIcon'}>
+                <img src={iconCouse} />
+              </div>
               <p className={'dataCouser'}>Titulo do curso: {language.title}</p> <br />
               <p className={'dataCouser'}>Descrição do curso: {language.description}</p> <br />
               <p className={'dataCouser'}>Idioma do curso: {language.languagem}</p> <br />
@@ -111,9 +124,9 @@ export default function CardInfor() {
       <section>
         <div className={'requisition'}>
           <h1>Cadastre um Curso</h1>
-          <input type='text' placeholder='Título' ref={titleRef} /> <br />
-          <input type='text' placeholder='Descrição' ref={descriptionRef} /> <br />
-          <input type='text' placeholder='Idioma' ref={languagemRef} /> <br />
+          <input type='text' placeholder='Título' ref={titleRef} className={'inputData'} /> <br />
+          <input type='text' placeholder='Descrição' ref={descriptionRef} className={'inputData'} /> <br />
+          <input type='text' placeholder='Idioma' ref={languagemRef} className={'inputData'} /> <br />
           <button className={'button'} onClick={postCouser}>Cadastrar</button>
         </div>
       </section>

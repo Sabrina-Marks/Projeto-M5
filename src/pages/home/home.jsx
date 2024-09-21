@@ -1,8 +1,11 @@
 import Header from '../../components/header/header.jsx'
 import Footer from '../../components/Footer/footer.jsx'
 import CardStudents from '../../components/cardStudents/cardStudents.jsx'
-import './style.css'
 import CardInfor from '../../components/cardInfor/cardInfor.jsx'
+import alura from '../../assets/alura.png'
+import CursoEmVideo from '../../assets/cursoEmVideo-logo.png'
+import pda from '../../assets/pda-logo.png'
+import './style.css'
 
 
 export default function Home() {
@@ -19,15 +22,15 @@ export default function Home() {
             <section>
                 <div className={'container'}>
                     <div className={'containerImg'}>
-                        <img src={'/cursoEmVideo-logo.png'} alt="" />
+                        <img src={CursoEmVideo} />
                         <h1>Curso Em Video</h1>
                     </div>
                     <div className={'containerImg'}>
-                        <img src={"/pda-logo.png"} alt="" />
+                        <img src={pda} />
                         <h1>Programadores do Amanhã</h1>
                     </div>
-                    <div className="containerImg">
-                        <img src={"/alura.png"} alt="" />
+                    <div className={'containerImg'}>
+                        <img src={alura} />
                         <h1>Alura</h1>
                     </div>
                 </div>

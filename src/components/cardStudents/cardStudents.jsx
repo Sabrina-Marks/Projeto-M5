@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from 'axios'
 import './cardStudent.css'
+import iconStudent from '../../assets/students.svg'
 
 
 export default function CardStudents() {
@@ -36,6 +37,9 @@ export default function CardStudents() {
                 {students && students.map(user => (
                     <div key={user.id} className={'cardStudent'}>
                         <div>
+                            <div className={'containerIconStudent'}>
+                                <img src={iconStudent} />
+                            </div>
                             <p className={'data'}>Nome: {user.name}</p> <br />
                             <p className={'data'}>E-mail: {user.email}</p> <br />
                         </div>
