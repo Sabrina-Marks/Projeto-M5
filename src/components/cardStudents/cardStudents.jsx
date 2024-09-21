@@ -30,7 +30,7 @@ export default function CardStudents() {
         <>
             <div className={'containerBtnStudent'}>
                 <h2>Entre em contato com estudantes</h2>
-                <button onClick={buttonGetAllStudents} className={'button'}>listar estudantes</button>
+                <button onClick={buttonGetAllStudents} className={'button'}>Estudantes</button>
             </div>
             <div className={'containerCardStudent'}>
                 {students && students.map(user => (

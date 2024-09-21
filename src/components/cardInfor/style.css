@@ -1,22 +1,24 @@
-main{
+main {
     display: flex;
     flex-flow: row wrap;
 }
 
-.container{
+
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 10px;
+    gap: 30px;
     padding: 20px;
 }
 
-.cardAllCousers{
+
+.cardAllCousers {
     width: 400px;
     height: 370px;
-    background:  rgb(45, 101, 148);
+    background: rgb(45, 101, 148);
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -24,30 +26,71 @@ main{
     padding: 1%;
 }
 
-.dataCouser{
+
+.dataCouser {
     font-family: 'osvaldo', 'fira-code';
     font-size: large;
+    display: flex;
+    flex-wrap: wrap;
     color: rgb(3, 7, 10);
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
-.containerBtn{
+
+.containerBtn {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 60px;
     margin-top: 120px;
     color: white;
 }
 
-.info{
+
+.info {
     display: flex;
     flex-direction: column;
 }
 
-h4 + button{
+
+h4+button {
     margin-top: 25px;
+}
+
+
+.requisition {
+    width: 350px;
+    height: 350px;
+    padding: 30px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(45, 101, 148);
+    color: black;
+}
+
+
+input {
+    width: 110%;
+    height: 120px;
+}
+
+
+h1 {
+    color: beige;
+    padding: 35px;
+}
+
+
+@media (max-width:450px) {
+    .cardAllCousers {
+        height: 450px;
+    }
 }

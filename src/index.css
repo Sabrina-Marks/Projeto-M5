@@ -6,12 +6,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 *{
   margin: 0;
   padding: 0%;
   box-sizing: border-box;
-  
 }
+
 
 .button {
   color: #fff;
@@ -23,11 +24,13 @@
   transition: 0.2s;
 }
 
+
 .button:hover {
   transform: translate(-0.25rem, -0.25rem);
   background: rgb(42, 101, 150);
   box-shadow: 0.25rem 0.25rem white;
 }
+
 
 .button:active {
   transform: translate(0);

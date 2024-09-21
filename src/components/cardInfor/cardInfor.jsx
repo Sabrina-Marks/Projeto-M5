@@ -1,42 +1,63 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import axios from 'axios'
 import './style.css'
-import CardStudents from '../cardStudents/cardStudents';
-
-
 
 export default function CardInfor() {
   const [couser, setCouser] = useState([]);
-  const [buttonClickAllCousers, setButtonClickAllCousers] = useState(false);
+  const [buttonAllCousers, setButtonAllCousers] = useState(false);
 
 
   const [languagem, setLanguagem] = useState('');
-  const [couserLanguagem, setCouserLanguagem] = useState([]);
+  const [buttonCouserLanguagem, setButtonCouserLanguagem] = useState([]);
 
+
+  const titleRef = useRef()
+  const descriptionRef = useRef()
+  const languagemRef = useRef()
 
 
   async function getCouser() {
     const { data } = await axios.get('http://localhost:4000/cursos')
     setCouser(data.listCousers)
-  };
-
-
-  async function buttonGetAllCousers() {
-    setButtonClickAllCousers(true)
-  };
-
-
-  useEffect(() => {
-    if (buttonClickAllCousers == true) {
-      getCouser()
-    }
-  }, [buttonClickAllCousers])
+  }
 
 
   async function findCouserLanguagem() {
     const { data } = await axios.get(`http://localhost:4000/cursos?languagem=${languagem}`)
-    setCouserLanguagem(data.listCousers)
-  };
+    setButtonCouserLanguagem(data.listCousers)
+  }
+
+
+  async function postCouser() {
+    await axios.post('http://localhost:4000/cursos', {
+      title: titleRef.current.value,
+      description: descriptionRef.current.value,
+      languagem: languagemRef.current.value
+    })
+    titleRef.current.value = ''
+    descriptionRef.current.value = ''
+    languagemRef.current.value = ''
+  }
+
+
+  async function deleteCouser(id) {
+    const { data } = await axios.delete(`http://localhost:4000/cursos/${id}`)
+    setCouser(data.cousers)
+    console.log(data)
+    getCouser()
+  }
+
+
+  async function buttonGetAllCousers() {
+    setButtonAllCousers(true)
+  }
+
+
+  useEffect(() => {
+    if (buttonAllCousers == true) {
+      getCouser()
+    }
+  }, [buttonAllCousers])
 
 
   useEffect(() => {
@@ -51,33 +72,33 @@ export default function CardInfor() {
       <div className={'containerBtn'}>
         <div className={'info'}>
           <h4>Veja todos os cursos disponiveis</h4>
-        <button onClick={buttonGetAllCousers} className={'button'} >Todos os cursos</button>
+          <button onClick={buttonGetAllCousers} className={'button'} >Todos os cursos</button>
         </div>
         <div className={'info'}>
           <h4>Cursos em Português</h4>
-        <button onClick={() => setLanguagem('Português')} className={'button'}>Português</button>
+          <button onClick={() => setLanguagem('Português')} className={'button'}>Português</button>
         </div>
         <div className={'info'}>
-        <h4>Cursos em Inglês</h4>
-        <button onClick={() => setLanguagem('Inglês')} className={'button'}>Inglês</button>
+          <h4>Cursos em Inglês</h4>
+          <button onClick={() => setLanguagem('Inglês')} className={'button'}>Inglês</button>
         </div>
       </div>
       <div className={'container'}>
-        {couser.map(couse => (
-          <div key={couse.id} className={'cardAllCousers'}>
-            <div>
-              <p className={'dataCouser'}>Titulo do Curso: {couse.title}</p> <br />
-              <p className={'dataCouser'}>Descrição do Curso: {couse.description}</p> <br />
-              <p className={'dataCouser'}>Idioma do Curso: {couse.languagem}</p> <br />
+        {couser.map(couse => {
+          return (
+            <div key={couse.id} className={'cardAllCousers'}>
+              <div>
+                <p className={'dataCouser'}>Titulo do Curso: {couse.title}</p> <br />
+                <p className={'dataCouser'}>Descrição do Curso: {couse.description}</p> <br />
+                <p className={'dataCouser'}>Idioma do Curso: {couse.languagem}</p> <br />
+              </div>
+              <button onClick={() => deleteCouser(couse.id)}>deletar</button>
             </div>
-            <button>deletar</button>
-          </div>
-        ))}
-      </div>
-
-
+          )
+        })}
+      </div >
       <div className={'container'}>
-        {couserLanguagem.map(language => (
+        {buttonCouserLanguagem.map(language => (
           <div key={language.id} className={'cardAllCousers'}>
             <div>
               <p className={'dataCouser'}>Titulo do curso: {language.title}</p> <br />
@@ -87,6 +108,15 @@ export default function CardInfor() {
           </div>
         ))}
       </div>
+      <section>
+        <div className={'requisition'}>
+          <h1>Cadastre um Curso</h1>
+          <input type='text' placeholder='Título' ref={titleRef} /> <br />
+          <input type='text' placeholder='Descrição' ref={descriptionRef} /> <br />
+          <input type='text' placeholder='Idioma' ref={languagemRef} /> <br />
+          <button className={'button'} onClick={postCouser}>Cadastrar</button>
+        </div>
+      </section>
     </>
   )
 }

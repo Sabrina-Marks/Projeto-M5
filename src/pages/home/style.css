@@ -1,15 +1,17 @@
 body {
-    background-color:  rgb(94, 143, 184);
+    background-color: rgb(94, 143, 184);
 }
+
 
 .description {
     width: 50%;
     height: 40%;
     padding: 30px;
     margin-top: 100px;
-    background-color:  rgb(45, 101, 148);
+    background-color: rgb(45, 101, 148);
     color: aliceblue;
 }
+
 
 .container {
     display: flex;
@@ -20,7 +22,8 @@ body {
     margin-top: 120px;
 }
 
-img{
+
+img {
     border-radius: 110px;
 }
 
@@ -32,32 +35,7 @@ section {
 }
 
 
-.requisition {
-    width: 350px;
-    height: 350px;
-    padding: 30px;
-    margin-top: 120px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    background-color: rgb(45, 101, 148);
-    color: black;
-}
-
-input {
-    width: 110%;
-    height: 40px;
-}
-
-h1 {
-    color: beige;
-    padding: 35px;
-}
-
-.containerImg{
+.containerImg {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -65,12 +43,17 @@ h1 {
     align-items: center;
     text-align: center;
     width: 300px;
-
     font-size: 16px;
 }
 
-.containerImg img{
+
+.containerImg img {
     width: 200px;
 }
 
 
+@media (max-width: 450px) {
+    .description {
+        width: 90%;
+    }
+}

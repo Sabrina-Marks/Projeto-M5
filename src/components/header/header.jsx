@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <>
             <header className={'header'}>
-                <span>Cursos Gratuitos</span>
+                <h1>Cursos Gratuitos</h1>
                 <nav>
                     <button className={'buttonHeader'}>
                         <a href="https://www.linkedin.com/in/marques-sabrina/">LinkedIn</a>
