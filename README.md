@@ -1,6 +1,6 @@
 README: Plataforma de Cursos Online com React
 Visão Geral
-Este projeto tem como objetivo criar uma plataforma de cursos online robusta e escalável, utilizando a biblioteca JavaScript React para o desenvolvimento do front-end. A plataforma oferece uma lista de cursos para que a experiência e o aprendizado seja mais interativa e personalizada para os usuários, com diversas funcionalidades que visam facilitar o processo de ensino-aprendizagem.
+Este projeto tem como objetivo criar uma plataforma de cursos online robusta e escalável, utilizando a biblioteca JavaScript React para o desenvolvimento do front-end. A plataforma oferece uma lista de cursos para que a experiência e o aprendizado seja mais interativa e personalizada para os usuários, com diversas funcionalidades que visam facilitar o processo de ensino-aprendizagem. A plataforma permite a listagem de todos os cursos disponíveis, além de fazer uma filtragem de cursos por idioma. Também é possível adicionar um novo curso, o usuário so precisa adicionar um título, uma descrição e o idioma do curso, o usuário pode deletar um curso atráves do icone "lixeira" que está na listagem de todos os cursos.
 
 Tecnologias Utilizadas
 Front-end:
