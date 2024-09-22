@@ -16,7 +16,10 @@ export default function Home() {
             <Header />
             <section>
                 <div className={'description'}>
-                    <h2>Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável.</h2>
+                    <h2>
+                        Seja bem-vindo ao site de cursos gratuitos de tecnologia, uma plataforma criada para democratizar o acesso ao conhecimento em tecnologia e programação. Nosso objetivo é capacitar pessoas de todas as origens e formações, oferecendo cursos gratuitos e de qualidade que possibilitem a transformação de vidas através da educação tecnológica.
+                    </h2><br />
+                    <h2>Confira abaixo alguns cursos disponíveis:</h2>
                 </div>
             </section>
             <section>

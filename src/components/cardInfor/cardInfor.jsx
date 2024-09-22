@@ -20,19 +20,19 @@ export default function CardInfor() {
 
 
   async function getCouser() {
-    const { data } = await axios.get('http://localhost:4000/cursos')
+    const { data } = await axios.get('http://localhost:3000/cursos')
     setCouser(data.listCousers)
   }
 
 
   async function findCouserLanguagem() {
-    const { data } = await axios.get(`http://localhost:4000/cursos?languagem=${languagem}`)
+    const { data } = await axios.get(`http://localhost:3000/cursos?languagem=${languagem}`)
     setButtonCouserLanguagem(data.listCousers)
   }
 
 
   async function postCouser() {
-    await axios.post('http://localhost:4000/cursos', {
+    await axios.post('http://localhost:3000/cursos', {
       title: titleRef.current.value,
       description: descriptionRef.current.value,
       languagem: languagemRef.current.value
@@ -46,7 +46,7 @@ export default function CardInfor() {
 
 
   async function deleteCouser(id) {
-    const { data } = await axios.delete(`http://localhost:4000/cursos/${id}`)
+    const { data } = await axios.delete(`http://localhost:3000/cursos/${id}`)
     setCouser(data.cousers)
     console.log(data)
     getCouser()

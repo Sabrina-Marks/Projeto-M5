@@ -10,7 +10,7 @@ export default function CardStudents() {
 
 
     async function getAllStudents() {
-        const { data } = await axios.get('http://localhost:4000/aluno')
+        const { data } = await axios.get('http://localhost:3000/aluno')
         setStudents(data.listStudent)
     }
 

@@ -76,7 +76,7 @@ h4+button {
     color: black;
 }
 
-.inputData{
+.inputData {
     width: 100%;
     padding: 10px;
     border-radius: 20px;
@@ -97,13 +97,15 @@ h1 {
     }
 }
 
-.buttonDelete{ 
+
+.buttonDelete {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.containerIcon{
+
+.containerIcon {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -111,13 +113,8 @@ h1 {
     text-align: center;
 }
 
-.container .imgIcon{
+
+.container .imgIcon {
     width: 150px;
     margin-bottom: 4px;
 }
-
-
-
-
-
-
