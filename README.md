@@ -11,7 +11,6 @@ Vite,
 Axios: 1.7.7,
 React 18.3.1,
 CSS,
-HTML,
 Módulo ES6.
 
 
