@@ -31,6 +31,9 @@ Clonar o repositório da API: https://github.com/Sabrina-Marks/API-M4.git
 
 Instale as dependência do projeto react e da API.
 
+Link da apresentação no LinkedIn:
+https://www.linkedin.com/posts/marques-sabrina_apresenta%C3%A7%C3%A3o-do-m%C3%B3dulo-5-activity-7244024432258691073-38Ld?utm_source=share&utm_medium=member_android  
+
 Veja abaixo fotos do projeto em diferentes resoluções:
 
 ![iPhone-13-PRO-localhost](https://github.com/user-attachments/assets/2982eec0-6443-47f0-af24-3e73ca85302d)
